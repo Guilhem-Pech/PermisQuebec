@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">PermisQuebec</string>
+    <string name="logo_quebec">logo quebec</string>
+    <string name="photo">photo</string>
+    <string name="adresse">333, BOULEVARD JEAN LESSAGE \nAPP.432 \nQUÉBEC (QC) G1K 8J6</string>
+    <string name="signature">signature</string>
+    <string name="permis_de_conduire">Permis de conduire</string>
+    <string name="id_4d">4d</string>
+    <string name="munpermis">L1531-171274-08</string>
+    <string name="nom">LAPOINTE</string>
+    <string name="prenom">ANNE-MARIE</string>
+    <string name="_3">3</string>
+    <string name="dateNaissance">Date de naissance (A-M-J) :</string>
+    <string name="_1974_12_17">1974-12-17</string>
+    <string name="_8">8</string>
+    <string name="_15">15</string>
+    <string name="sexe">Sexe</string>
+    <string name="f">F</string>
+    <string name="_9">9</string>
+    <string name="classe_s">Classe(s)</string>
+    <string name="_5">5</string>
+    <string name="_4a">4a</string>
+    <string name="valide_le">Valide le:</string>
+    <string name="_2014_10_01">2014-10-01</string>
+    <string name="_4b">4b</string>
+    <string name="expire_le">Expire le:</string>
+    <string name="_2022_12_17">2022-12-17</string>
 </resources>
