@@ -25,4 +25,14 @@
     <string name="_4b">4b</string>
     <string name="expire_le">Expire le:</string>
     <string name="_2022_12_17">2022-12-17</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="set">Set</string>
+    <string name="textview">TextView</string>
+    <string name="_nom">Nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="femme">Femme</string>
+    <string name="affiche_paiement_exig">Affiche paiement exigé</string>
+    <string name="homme">Homme</string>
+    <string name="_h">H</string>
 </resources>

@@ -15,28 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -99,8 +78,7 @@
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingStart="10dp">
+                    android:layout_height="match_parent">
 
                     <TableRow
                         android:id="@+id/idpermis"
@@ -234,9 +212,17 @@
                     <TableRow
                         android:id="@+id/sexe"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="right"
-                        android:paddingRight="30dp">
+                        android:layout_height="match_parent">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3" />
 
                         <TextView
                             android:id="@+id/id_sexe"
@@ -397,10 +383,8 @@
 
                         <TextView
                             android:id="@+id/textmessage"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:maxEms="21"
-                            android:singleLine="false"
                             android:text="Paiement exigé chaque année à votre date anniversaire de naissance"
                             android:textAllCaps="false"
                             android:textAppearance="@style/TextAppearance.AppCompat"
@@ -410,6 +394,103 @@
 
                 </TableLayout>
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <EditText
+                    android:id="@+id/textView_firstname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:hint="@string/pr_nom"
+                    android:inputType="textPersonName"
+                    android:text="@string/pr_nom"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="88dp"
+                    android:layout_height="50dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <EditText
+                    android:id="@+id/textView_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:hint="@string/_nom"
+                    android:inputType="textPersonName"
+                    android:text="@string/_nom"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/button_lastname"
+                    android:layout_width="88dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:text="@string/set"
+                    android:onClick="misaAJour"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Switch
+                    android:id="@+id/switch_sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/femme"
+                    android:textAlignment="viewStart"
+                    android:textOff="@string/femme"
+                    android:textOn="@string/homme"
+                    tools:checked="false"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/homme"
+                    android:textColor="@android:color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <CheckBox
+                    android:id="@+id/paiement_exige"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/affiche_paiement_exig" />
+            </TableRow>
 
         </LinearLayout>
 
