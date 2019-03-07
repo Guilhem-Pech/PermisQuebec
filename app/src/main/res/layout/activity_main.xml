@@ -12,39 +12,13 @@
         android:orientation="vertical"
         android:visibility="visible">
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
-
-            <LinearLayout
+            <TableRow
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/logoQuebec"
@@ -56,6 +30,12 @@
                     android:visibility="visible"
                     app:srcCompat="@drawable/quebec_logo"
                     tools:layout_marginTop="15dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
 
                 <ImageView
                     android:id="@+id/photo"
@@ -68,348 +48,355 @@
 
                 <ImageView
                     android:id="@+id/signature"
-                    android:layout_width="match_parent"
-                    android:layout_height="68dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
                     android:contentDescription="@string/signature"
                     app:srcCompat="@drawable/signature" />
+            </TableRow>
 
-            </LinearLayout>
+        </TableLayout>
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+            <TableRow
+                android:id="@+id/TitleRaw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/permis_de_conduire"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textStyle="italic" />
+
+            </TableRow>
+
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingTop="40dp">
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
 
                 <TableRow
-                    android:id="@+id/TitleRaw"
+                    android:id="@+id/idpermis"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/id_numeropermis"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:text="@string/permis_de_conduire"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                        android:textStyle="italic" />
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/id_4d" />
+
+                    <TextView
+                        android:id="@+id/numeropermis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/munpermis"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/nom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_nom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_1" />
+
+                    <TextView
+                        android:id="@+id/nomText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nom"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/prenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_prenom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_2" />
+
+                    <TextView
+                        android:id="@+id/prenomtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prenom"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/datenaissance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_naissance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/dateNaissance"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:id="@+id/datedenaissance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_1974_12_17"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </TableRow>
 
-                <TableLayout
+                <TableRow
+                    android:id="@+id/adresse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_adresse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_8" />
+
+                    <TextView
+                        android:id="@+id/adresseText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adresse"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/sexe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_sexe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="0"
+                        android:text="@string/_15" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/sexeinfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/sexe"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:id="@+id/sexetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/classe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_classe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/classeinfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/classe_s"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:id="@+id/classetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_5"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/validdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_valid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="0"
+                        android:text="@string/_4a" />
+
+                    <LinearLayout
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/valideinfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/valide_le"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:id="@+id/validetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_2014_10_01"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/expiredate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_valid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/_4b" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/expireInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/expire_le"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:id="@+id/expiretext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_2022_12_17"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingStart="10dp">
+                    android:layout_weight="0">
 
-                    <TableRow
-                        android:id="@+id/idpermis"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_numeropermis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/id_4d" />
-
-                        <TextView
-                            android:id="@+id/numeropermis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/munpermis"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/TextAppearance.AppCompat"
-                            android:textSize="30sp"
-                            android:textStyle="bold" />
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/nom"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_nom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_1" />
-
-                        <TextView
-                            android:id="@+id/nomText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nom"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/TextAppearance.AppCompat"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/prenom"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_prenom"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_2" />
-
-                        <TextView
-                            android:id="@+id/prenomtext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/prenom"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/TextAppearance.AppCompat"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/datenaissance"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_naissance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_3" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/dateNaissance"
-                                android:textColor="@android:color/holo_blue_dark" />
-
-                            <TextView
-                                android:id="@+id/datedenaissance"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_1974_12_17"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/adresse"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_adresse"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_8" />
-
-                        <TextView
-                            android:id="@+id/adresseText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/adresse"
-                            android:textAppearance="@style/TextAppearance.AppCompat"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/sexe"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="right"
-                        android:paddingRight="30dp">
-
-                        <TextView
-                            android:id="@+id/id_sexe"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:layout_weight="0"
-                            android:text="@string/_15" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/sexeinfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/sexe"
-                                android:textColor="@android:color/holo_blue_dark" />
-
-                            <TextView
-                                android:id="@+id/sexetext"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/f"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/classe"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_classe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_9" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/classeinfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/classe_s"
-                                android:textColor="@android:color/holo_blue_dark" />
-
-                            <TextView
-                                android:id="@+id/classetext"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_5"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/validandexpirdate"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/id_valid"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_4a" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/valideinfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/valide_le"
-                                android:textColor="@android:color/holo_blue_dark" />
-
-                            <TextView
-                                android:id="@+id/validetext"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_2014_10_01"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/id_valid2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/_4b" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/expireInfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/expire_le"
-                                android:textColor="@android:color/holo_blue_dark" />
-
-                            <TextView
-                                android:id="@+id/expiretext"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/_2022_12_17"
-                                android:textAppearance="@style/TextAppearance.AppCompat"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/message"
+                    <TextView
+                        android:id="@+id/id_message"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0">
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp" />
 
-                        <TextView
-                            android:id="@+id/id_message"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="15dp" />
+                    <TextView
+                        android:id="@+id/textmessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxEms="21"
+                        android:singleLine="false"
+                        android:text="@string/paiement_exig_chaque_ann_e_votre_date_anniversaire_de_naissance"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
 
-                        <TextView
-                            android:id="@+id/textmessage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:maxEms="21"
-                            android:singleLine="false"
-                            android:text="Paiement exigé chaque année à votre date anniversaire de naissance"
-                            android:textAllCaps="false"
-                            android:textAppearance="@style/TextAppearance.AppCompat"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </TableRow>
-
-                </TableLayout>
-            </LinearLayout>
+            </TableLayout>
 
         </LinearLayout>
 

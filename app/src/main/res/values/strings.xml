@@ -35,4 +35,10 @@
     <string name="affiche_paiement_exig">Affiche paiement exigé</string>
     <string name="homme">Homme</string>
     <string name="_h">H</string>
+    <string name="paiement_exig_chaque_ann_e_votre_date_anniversaire_de_naissance">Paiement exigé chaque année à votre date anniversaire de naissance</string>
+    <string name="toast">Toast</string>
+    <string name="notif">Notif</string>
+    <string name="toastsphrase">Les toasts sont prets !</string>
+    <string name="_default">Default</string>
+    <string name="channel_description">Default chanel</string>
 </resources>

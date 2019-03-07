@@ -451,7 +451,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="0"
                     android:text="@string/set"
-                    android:onClick="misaAJour"/>
+                    android:onClick="miseAJour"/>
 
             </TableRow>
 
@@ -492,6 +492,28 @@
                     android:text="@string/affiche_paiement_exig" />
             </TableRow>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/toast"
+                android:onClick="createToast"/>
+
+            <Button
+                android:id="@+id/notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/notif"
+                android:onClick="createNotif"/>
         </LinearLayout>
 
     </LinearLayout>
