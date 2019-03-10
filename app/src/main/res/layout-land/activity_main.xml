@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            style="@style/carte.section1">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -34,7 +35,8 @@
                     android:cropToPadding="true"
                     android:visibility="visible"
                     app:srcCompat="@drawable/quebec_logo"
-                    tools:layout_marginTop="15dp" />
+                    tools:layout_marginTop="15dp"
+                    style="@style/carte.section1.photo"/>
 
                 <ImageView
                     android:id="@+id/photo"
@@ -172,7 +174,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:text="@string/dateNaissance"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="?attr/colorPrimaryDark" />
 
                             <TextView
                                 android:id="@+id/datedenaissance"
@@ -244,7 +246,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:text="@string/sexe"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="?attr/colorPrimaryDark" />
 
                             <TextView
                                 android:id="@+id/sexetext"
@@ -283,7 +285,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:text="@string/classe_s"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="?android:attr/colorPrimaryDark" />
 
                             <TextView
                                 android:id="@+id/classetext"
@@ -322,7 +324,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:text="@string/valide_le"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="?attr/colorPrimaryDark" />
 
                             <TextView
                                 android:id="@+id/validetext"
@@ -354,7 +356,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="10dp"
                                 android:text="@string/expire_le"
-                                android:textColor="@android:color/holo_blue_dark" />
+                                android:textColor="?attr/colorPrimaryDark" />
 
                             <TextView
                                 android:id="@+id/expiretext"
@@ -385,7 +387,7 @@
                             android:id="@+id/textmessage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Paiement exigé chaque année à votre date anniversaire de naissance"
+                            android:text="@string/paiement_exig_chaque_ann_e_votre_date_anniversaire_de_naissance"
                             android:textAllCaps="false"
                             android:textAppearance="@style/TextAppearance.AppCompat"
                             android:textSize="14sp"
