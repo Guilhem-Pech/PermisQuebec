@@ -1,15 +1,17 @@
 package ca.uqac.gpech.permisquebec;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.os.Build;
-import android.os.PersistableBundle;
+import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.view.MenuCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -35,6 +37,33 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.menu_1:
+                Log.i("DIM","LOG 1");
+                break;
+            case R.id.menu_2:
+                Log.i("DIM","LOG 2");
+                break;
+
+            default:
+                break;
+        }
+
+        return true;
+    }
+
 
     @Override
     protected void onStart() {
@@ -46,32 +75,32 @@ public class MainActivity extends AppCompatActivity {
         nom = findViewById(R.id.nomText);
 
         if(message != null)
-        message.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                TextView messageText = findViewById(R.id.textmessage);
-                if(isChecked){
-                    messageText.setActivated(true);
-                    messageBool = true;
-                } else {
-                    messageText.setActivated(false);
-                    messageBool = false;
+            message.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    TextView messageText = findViewById(R.id.textmessage);
+                    if(isChecked){
+                        messageText.setActivated(true);
+                        messageBool = true;
+                    } else {
+                        messageText.setActivated(false);
+                        messageBool = false;
+                    }
                 }
-            }
-        });
+            });
 
         if(sexeSwitch != null)
-        sexeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            sexeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(isChecked){
-                    sexeTextView.setText(getString(R.string._h));
-                } else{
-                    sexeTextView.setText(getString(R.string.f));
+                    if(isChecked){
+                        sexeTextView.setText(getString(R.string._h));
+                    } else{
+                        sexeTextView.setText(getString(R.string.f));
+                    }
                 }
-            }
-        });
+            });
     }
 
     public void miseAJour(View view) {
@@ -136,7 +165,9 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.createNotificationChannel(channel);
 
     }
-    
+
+
+
     public void createNotif(View view) {
         if( CHANNEL_ID.isEmpty())
             createNotificationChannel();
